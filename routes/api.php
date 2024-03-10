@@ -17,10 +17,6 @@ use App\Http\Controllers\Api\ProjectController as ProjectController;
 
 Route::get('/projects', [ProjectController::class, 'index']);
 
-Route::get('/test', function(){
-    return response()->json(['message' => 'ciao']);
-});
-
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
